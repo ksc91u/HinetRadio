@@ -77,6 +77,13 @@
 	currentPlayingChannelIdentifier = nil;
 
 	[self setupMenu];
+	if (![[NSUserDefaults standardUserDefaults] objectForKey:@"HRLastUsedVolume"]) {		
+		[volumeSlider setDoubleValue:1.0];
+	}
+	else {
+		[volumeSlider setDoubleValue:[[NSUserDefaults standardUserDefaults] doubleForKey:@"HRLastUsedVolume"]];
+	}
+	
 
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEnd:) name:QTMovieDidEndNotification object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didLoad:) name:QTMovieLoadStateDidChangeNotification object:nil];	
@@ -162,6 +169,7 @@
 - (IBAction)changeVolumeAction:(id)sender
 {
 	if (movie) { [movie setVolume:[volumeSlider doubleValue]]; }
+	[[NSUserDefaults standardUserDefaults] setDouble:[volumeSlider doubleValue] forKey:@"HRLastUsedVolume"];
 }
 
 #pragma mark QTMovie notification handlers
