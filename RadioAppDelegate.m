@@ -6,6 +6,10 @@
 
 - (void) dealloc
 {	
+	if (movie) {
+		[movie stop];
+		[movie release];
+	}	
 	[currentPlayingChannelIdentifier release];
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	[super dealloc];
@@ -50,12 +54,17 @@
 	
 	[popupButton setMenu:menu];
 	
-	e = [[[popupButton menu] itemArray] objectEnumerator];
-	NSMenuItem *item = nil;
-	while (item = [e nextObject]) {
-		if ([item isEnabled]) {
-			[popupButton selectItem:item];
-			break;
+	if ([[NSUserDefaults standardUserDefaults] objectForKey:@"HRLastUsedChannel"]) {
+		[popupButton selectItemAtIndex:[[NSUserDefaults standardUserDefaults] integerForKey:@"HRLastUsedChannel"]];
+	}
+	else {
+		e = [[[popupButton menu] itemArray] objectEnumerator];
+		NSMenuItem *item = nil;
+		while (item = [e nextObject]) {
+			if ([item isEnabled]) {
+				[popupButton selectItem:item];
+				break;
+			}
 		}
 	}
 
