@@ -37,6 +37,7 @@
 			NSString *name = nil;			
 			if ([identifierString intValue]) {
 				name = [line substringToIndex:[line length] - [identifierString length]];
+				name = [name stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 				identifier = [NSNumber numberWithInt:[identifierString intValue]];
 			}
 			else {
