@@ -128,6 +128,8 @@
 		return;
 	}
 	isPreparing = YES;
+	[playButton setTitle:NSLocalizedString(@"Stop", @"")];
+	[playButton setAction:@selector(stopAction:)];
 
 	currentPlayingChannelIdentifier = [currentSelectedChannelIdentifier retain];
 	[indicator setHidden:NO];
