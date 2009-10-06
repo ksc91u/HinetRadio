@@ -12,6 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
+			<integer value="29"/>
 			<integer value="533"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
@@ -1323,7 +1324,7 @@
 			<object class="NSWindowTemplate" id="489778998">
 				<int key="NSWindowStyleMask">275</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{140, 843}, {345, 83}}</string>
+				<string key="NSWindowRect">{{140, 856}, {345, 70}}</string>
 				<int key="NSWTFlags">611844096</int>
 				<string key="NSWindowTitle"/>
 				<string key="NSWindowClass">NSPanel</string>
@@ -1455,11 +1456,12 @@
 							</object>
 						</object>
 					</object>
-					<string key="NSFrameSize">{345, 83}</string>
+					<string key="NSFrameSize">{345, 70}</string>
 					<reference key="NSSuperview"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1680, 1028}}</string>
 				<string key="NSMaxSize">{1.79769e+308, 1.79769e+308}</string>
+				<string key="NSFrameAutosaveName">HRWindowFrame</string>
 			</object>
 			<object class="NSUserDefaultsController" id="476413996">
 				<bool key="NSSharedInstance">YES</bool>
@@ -3262,9 +3264,9 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="401511629"/>
-							<reference ref="458269267"/>
 							<reference ref="407207675"/>
 							<reference ref="769450490"/>
+							<reference ref="458269267"/>
 						</object>
 						<reference key="parent" ref="489778998"/>
 					</object>
@@ -3828,9 +3830,9 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{149, 889}, {345, 83}}</string>
+					<string>{{149, 902}, {345, 70}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{149, 889}, {345, 83}}</string>
+					<string>{{149, 902}, {345, 70}}</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>

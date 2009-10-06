@@ -73,6 +73,9 @@
 - (void)awakeFromNib
 {
 	[[self window] setDelegate:self];
+	[[[self window] standardWindowButton:NSWindowZoomButton] setHidden:YES];
+	[[[self window] standardWindowButton:NSWindowMiniaturizeButton] setHidden:YES];
+	
 	[indicator setHidden:YES];
 	currentPlayingChannelIdentifier = nil;
 
