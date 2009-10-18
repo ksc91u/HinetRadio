@@ -1,8 +1,12 @@
 #import <Cocoa/Cocoa.h>
 #import <QTKit/QTKit.h>
+#import "CGSPrivate.h"
 
 @interface RadioAppDelegate : NSWindowController
 {
+	IBOutlet NSView *defaultContentView;
+	IBOutlet NSView *infoView;
+	
 	IBOutlet NSPopUpButton *popupButton;
 	IBOutlet NSButton *playButton;
 	IBOutlet NSProgressIndicator *indicator;
@@ -21,6 +25,9 @@
 - (IBAction)playAction:(id)sender;
 - (IBAction)stopAction:(id)sender;
 - (IBAction)changeVolumeAction:(id)sender;
+
+- (IBAction)flipBackAction:(id)sender;
+- (IBAction)flipFrontAction:(id)sender;
 
 - (NSString *)currentSelectedChannelIdentifier;
 - (BOOL)isPlaying;

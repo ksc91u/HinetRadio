@@ -33,6 +33,6 @@
     <key>LSHasLocalizedDisplayName</key>
     <true/>
     <key>LSUIElement</key>
-    <string>1</string>
+    <string>0</string>
 </dict>
 </plist>

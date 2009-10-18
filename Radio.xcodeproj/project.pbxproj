@@ -12,9 +12,29 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		D42638C6108BAF870003733D /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = D42638C4108BAF870003733D /* play.png */; };
+		D42638C7108BAF870003733D /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = D42638C5108BAF870003733D /* stop.png */; };
+		D4263905108BB1A90003733D /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4263904108BB1A90003733D /* BWToolkitFramework.framework */; };
+		D426393A108BB1CF0003733D /* BWToolkitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4263904108BB1A90003733D /* BWToolkitFramework.framework */; };
+		D4263951108BB49F0003733D /* playGray.png in Resources */ = {isa = PBXBuildFile; fileRef = D426394F108BB49F0003733D /* playGray.png */; };
+		D4263952108BB49F0003733D /* sropGray.png in Resources */ = {isa = PBXBuildFile; fileRef = D4263950108BB49F0003733D /* sropGray.png */; };
+		D4263963108BB57C0003733D /* ZBButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D4263962108BB57C0003733D /* ZBButton.m */; };
 		D4CA14DB107BBF6000AA30A3 /* menu.txt in Resources */ = {isa = PBXBuildFile; fileRef = D4CA14DA107BBF6000AA30A3 /* menu.txt */; };
 		D4CA14DF107BC00800AA30A3 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4CA14DE107BC00800AA30A3 /* QTKit.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D4263940108BB1D90003733D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D426393A108BB1CF0003733D /* BWToolkitFramework.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -29,6 +49,14 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Radio-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Radio-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Radio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Radio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D42638C4108BAF870003733D /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = play.png; path = Images/play.png; sourceTree = "<group>"; };
+		D42638C5108BAF870003733D /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stop.png; path = Images/stop.png; sourceTree = "<group>"; };
+		D4263904108BB1A90003733D /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = BWToolkit/BWToolkitFramework.framework; sourceTree = "<group>"; };
+		D426394F108BB49F0003733D /* playGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = playGray.png; path = Images/playGray.png; sourceTree = "<group>"; };
+		D4263950108BB49F0003733D /* sropGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sropGray.png; path = Images/sropGray.png; sourceTree = "<group>"; };
+		D4263961108BB57C0003733D /* ZBButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBButton.h; sourceTree = "<group>"; };
+		D4263962108BB57C0003733D /* ZBButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBButton.m; sourceTree = "<group>"; };
+		D42639C9108BB9D90003733D /* CGSPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGSPrivate.h; sourceTree = "<group>"; };
 		D4CA14DA107BBF6000AA30A3 /* menu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = menu.txt; sourceTree = "<group>"; };
 		D4CA14DE107BC00800AA30A3 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -40,6 +68,7 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				D4CA14DF107BC00800AA30A3 /* QTKit.framework in Frameworks */,
+				D4263905108BB1A90003733D /* BWToolkitFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,8 +78,11 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D42639C9108BB9D90003733D /* CGSPrivate.h */,
 				256AC3D80F4B6AC300CF3369 /* RadioAppDelegate.h */,
 				256AC3D90F4B6AC300CF3369 /* RadioAppDelegate.m */,
+				D4263961108BB57C0003733D /* ZBButton.h */,
+				D4263962108BB57C0003733D /* ZBButton.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -67,6 +99,7 @@
 		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D4263904108BB1A90003733D /* BWToolkitFramework.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
 				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
@@ -106,6 +139,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D42638C1108BAF7A0003733D /* Images */,
 				D4CA14DA107BBF6000AA30A3 /* menu.txt */,
 				8D1107310486CEB800E47090 /* Radio-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
@@ -123,6 +157,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D42638C1108BAF7A0003733D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D42638C4108BAF870003733D /* play.png */,
+				D42638C5108BAF870003733D /* stop.png */,
+				D426394F108BB49F0003733D /* playGray.png */,
+				D4263950108BB49F0003733D /* sropGray.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -133,6 +178,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				D4263940108BB1D90003733D /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -169,6 +215,10 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				D4CA14DB107BBF6000AA30A3 /* menu.txt in Resources */,
+				D42638C6108BAF870003733D /* play.png in Resources */,
+				D42638C7108BAF870003733D /* stop.png in Resources */,
+				D4263951108BB49F0003733D /* playGray.png in Resources */,
+				D4263952108BB49F0003733D /* sropGray.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +231,7 @@
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				256AC3DA0F4B6AC300CF3369 /* RadioAppDelegate.m in Sources */,
+				D4263963108BB57C0003733D /* ZBButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +262,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/BWToolkit\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -229,6 +284,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/BWToolkit\"",
+				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Radio_Prefix.pch;

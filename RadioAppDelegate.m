@@ -10,6 +10,7 @@
 		[movie stop];
 		[movie release];
 	}	
+	[defaultContentView release];
 	[currentPlayingChannelIdentifier release];
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	[super dealloc];
@@ -73,6 +74,11 @@
 
 - (void)awakeFromNib
 {
+	[playButton setImage:[NSImage imageNamed:@"play"]];
+	[defaultContentView retain];
+//	[playButton setAlternateImage:[NSImage imageNamed:@"playGray"]];
+
+//	[[self window] setAlphaValue:0.9];
 	[[self window] setDelegate:self];
 	[[[self window] standardWindowButton:NSWindowZoomButton] setHidden:YES];
 	[[[self window] standardWindowButton:NSWindowMiniaturizeButton] setHidden:YES];
@@ -148,7 +154,9 @@
 		return;
 	}
 	isPreparing = YES;
-	[playButton setTitle:NSLocalizedString(@"Stop", @"")];
+	[playButton setImage:[NSImage imageNamed:@"stop"]];
+	[playButton setAlternateImage:[NSImage imageNamed:@"stopGray"]];
+	[playButton setNeedsDisplay:YES];
 	[playButton setAction:@selector(stopAction:)];
 
 	currentPlayingChannelIdentifier = [currentSelectedChannelIdentifier retain];
@@ -167,7 +175,8 @@
 	
 	[indicator setHidden:YES];
 	[indicator stopAnimation:self];
-	[playButton setTitle:NSLocalizedString(@"Play", @"")];
+	[playButton setImage:[NSImage imageNamed:@"play"]];
+	[playButton setNeedsDisplay:YES];
 	[playButton setAction:@selector(playAction:)];
 }
 - (IBAction)changeVolumeAction:(id)sender
@@ -175,6 +184,43 @@
 	if (movie) { [movie setVolume:[volumeSlider doubleValue]]; }
 	[[NSUserDefaults standardUserDefaults] setDouble:[volumeSlider doubleValue] forKey:@"HRLastUsedVolume"];
 }
+- (IBAction)flipBackAction:(id)sender
+{
+	int handle = -1;
+    CGSTransitionSpec spec;
+	spec.unknown1 = 0;
+    spec.type = CGSFlip;	
+    spec.option = CGSDown | (1<<7);;
+    spec.backColour = 0;
+    spec.wid = [[self window] windowNumber];
+	CGSConnection cgs = _CGSDefaultConnection();
+	CGSNewTransition(cgs, &spec, &handle);
+	[[self window] setContentView:infoView];
+	[[self window] display];
+    CGSInvokeTransition(cgs, handle, 0.5);
+	usleep((useconds_t)(500000));
+    CGSReleaseTransition(cgs, handle);
+    handle = 0;
+}
+- (IBAction)flipFrontAction:(id)sender
+{
+	int handle = -1;
+    CGSTransitionSpec spec;
+	spec.unknown1 = 0;
+    spec.type = CGSFlip;	
+    spec.option = CGSUp | (1<<7);; 
+    spec.backColour = 0;
+    spec.wid = [[self window] windowNumber];
+	CGSConnection cgs = _CGSDefaultConnection();
+	CGSNewTransition(cgs, &spec, &handle);
+	[[self window] setContentView:defaultContentView];
+	[[self window] display];
+    CGSInvokeTransition(cgs, handle, 0.5);
+	usleep((useconds_t)(500000));
+    CGSReleaseTransition(cgs, handle);
+    handle = 0;
+}
+
 
 #pragma mark QTMovie notification handlers
 
@@ -183,7 +229,8 @@
 	id object = [notification object];
 	[(QTMovie *)object setVolume:[volumeSlider doubleValue]];
 	
-	[playButton setTitle:NSLocalizedString(@"Stop", @"")];
+	[playButton setImage:[NSImage imageNamed:@"stop"]];
+	[playButton setNeedsDisplay:YES];
 	[playButton setAction:@selector(stopAction:)];
 	
 	[indicator setHidden:YES];
@@ -194,7 +241,8 @@
 }
 - (void)didEnd:(NSNotification *)notification
 {
-	[playButton setTitle:NSLocalizedString(@"Play", @"")];
+	[playButton setImage:[NSImage imageNamed:@"play"]];
+	[playButton setNeedsDisplay:YES];
 	[playButton setAction:@selector(playAction:)];
 
 	[indicator setHidden:YES];
