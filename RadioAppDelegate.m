@@ -19,7 +19,7 @@
 - (void)setupMenu
 {
 	NSString *menuSettingFilePath = [[NSBundle mainBundle] pathForResource:@"menu" ofType:@"txt"];
-	NSError *error;
+	NSError *error=nil;
 	NSString *menuContent = [NSString stringWithContentsOfFile:menuSettingFilePath encoding:NSUTF8StringEncoding error:&error];
 	NSArray *lines = [menuContent componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
 	NSEnumerator *e = [lines objectEnumerator];
