@@ -15,7 +15,7 @@
 	NSImage *alternateImage;
 }
 
-@property (retain, nonatomic) NSImage *image;
-@property (retain, nonatomic) NSImage *alternateImage;
+/*@property (retain, nonatomic) NSImage *image;
+@property (retain, nonatomic) NSImage *alternateImage;*/
 
 @end

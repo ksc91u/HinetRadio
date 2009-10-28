@@ -16,7 +16,7 @@
 	[[self image] drawInRect:[self bounds] fromRect:NSZeroRect operation: NSCompositeSourceOver fraction:1.0];
 }
 
-@synthesize image;
+/*@synthesize image;
 @synthesize alternateImage;
-
+*/
 @end

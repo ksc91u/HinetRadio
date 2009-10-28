@@ -21,7 +21,7 @@
 	NSString *menuSettingFilePath = [[NSBundle mainBundle] pathForResource:@"menu" ofType:@"txt"];
 	NSError *error=nil;
 	NSString *menuContent = [NSString stringWithContentsOfFile:menuSettingFilePath encoding:NSUTF8StringEncoding error:&error];
-	NSArray *lines = [menuContent componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+	NSArray *lines = [menuContent componentsSeparatedByString:@"\n"];
 	NSEnumerator *e = [lines objectEnumerator];
 	NSString *line = nil;
 	NSMenu *menu = [[[NSMenu alloc] initWithTitle:@""] autorelease];
@@ -31,7 +31,7 @@
 		if (![line length]) {
 			continue;
 		}
-		NSArray *a = [line componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+		NSArray *a = [line componentsSeparatedByString:@"\t"];
 		if ([a count]) {
 			NSString *identifierString = [a lastObject];
 			NSNumber *identifier = nil;
@@ -88,10 +88,10 @@
 
 	[self setupMenu];
 	if (![[NSUserDefaults standardUserDefaults] objectForKey:@"HRLastUsedVolume"]) {		
-		[volumeSlider setDoubleValue:1.0];
+		[volumeSlider setFloatValue:1.0];
 	}
 	else {
-		[volumeSlider setDoubleValue:[[NSUserDefaults standardUserDefaults] doubleForKey:@"HRLastUsedVolume"]];
+		[volumeSlider setFloatValue:[[NSUserDefaults standardUserDefaults] floatForKey:@"HRLastUsedVolume"]];
 	}
 	
 
@@ -118,10 +118,10 @@
 	if (![self currentSelectedChannelIdentifier]) return;	
 	if ([[self currentSelectedChannelIdentifier] isEqualToString:currentPlayingChannelIdentifier]) return;
 	
-	if (isPlaying || isPreparing) {
+	//if (isPlaying || isPreparing) {
 		[self stopAction:sender];
 		[self playAction:sender];
-	}
+	//}
 }
 - (IBAction)playAction:(id)sender
 {
@@ -181,8 +181,8 @@
 }
 - (IBAction)changeVolumeAction:(id)sender
 {
-	if (movie) { [movie setVolume:[volumeSlider doubleValue]]; }
-	[[NSUserDefaults standardUserDefaults] setDouble:[volumeSlider doubleValue] forKey:@"HRLastUsedVolume"];
+	if (movie) { [movie setVolume:[volumeSlider floatValue]]; }
+	[[NSUserDefaults standardUserDefaults] setFloat:[volumeSlider floatValue] forKey:@"HRLastUsedVolume"];
 }
 - (IBAction)flipBackAction:(id)sender
 {
@@ -227,7 +227,7 @@
 - (void)didLoad:(NSNotification *)notification
 {
 	id object = [notification object];
-	[(QTMovie *)object setVolume:[volumeSlider doubleValue]];
+	[(QTMovie *)object setVolume:[volumeSlider floatValue]];
 	
 	[playButton setImage:[NSImage imageNamed:@"stop"]];
 	[playButton setNeedsDisplay:YES];
