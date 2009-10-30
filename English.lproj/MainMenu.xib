@@ -3,7 +3,7 @@
 	<data>
 		<int key="IBDocument.SystemTarget">1050</int>
 		<string key="IBDocument.SystemVersion">10B504</string>
-		<string key="IBDocument.InterfaceBuilderVersion">740</string>
+		<string key="IBDocument.InterfaceBuilderVersion">732</string>
 		<string key="IBDocument.AppKitVersion">1038.2</string>
 		<string key="IBDocument.HIToolboxVersion">437.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
@@ -15,7 +15,7 @@
 			</object>
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
-				<string>740</string>
+				<string>732</string>
 				<string>1.2.2</string>
 			</object>
 		</object>
@@ -1511,6 +1511,38 @@
 				<int key="NSvFlags">268</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
+					<object class="NSTextField" id="159050571">
+						<reference key="NSNextResponder" ref="251720822"/>
+						<int key="NSvFlags">268</int>
+						<string key="NSFrame">{{12, 20}, {131, 14}}</string>
+						<reference key="NSSuperview" ref="251720822"/>
+						<bool key="NSEnabled">YES</bool>
+						<object class="BWTransparentTextFieldCell" key="NSCell" id="762962952">
+							<int key="NSCellFlags">68288064</int>
+							<int key="NSCellFlags2">272761856</int>
+							<string key="NSContents">2009 © Gung Shi Jie</string>
+							<reference key="NSSupport" ref="26"/>
+							<reference key="NSControlView" ref="159050571"/>
+							<object class="NSColor" key="NSBackgroundColor" id="233890848">
+								<int key="NSColorSpace">6</int>
+								<string key="NSCatalogName">System</string>
+								<string key="NSColorName">controlColor</string>
+								<object class="NSColor" key="NSColor">
+									<int key="NSColorSpace">3</int>
+									<bytes key="NSWhite">MC42NjY2NjY2NjY3AA</bytes>
+								</object>
+							</object>
+							<object class="NSColor" key="NSTextColor" id="407189409">
+								<int key="NSColorSpace">6</int>
+								<string key="NSCatalogName">System</string>
+								<string key="NSColorName">controlTextColor</string>
+								<object class="NSColor" key="NSColor">
+									<int key="NSColorSpace">3</int>
+									<bytes key="NSWhite">MAA</bytes>
+								</object>
+							</object>
+						</object>
+					</object>
 					<object class="NSTextField" id="281604773">
 						<reference key="NSNextResponder" ref="251720822"/>
 						<int key="NSvFlags">268</int>
@@ -1523,24 +1555,8 @@
 							<string key="NSContents">2009 © Weizhong Yang</string>
 							<reference key="NSSupport" ref="26"/>
 							<reference key="NSControlView" ref="281604773"/>
-							<object class="NSColor" key="NSBackgroundColor">
-								<int key="NSColorSpace">6</int>
-								<string key="NSCatalogName">System</string>
-								<string key="NSColorName">controlColor</string>
-								<object class="NSColor" key="NSColor">
-									<int key="NSColorSpace">3</int>
-									<bytes key="NSWhite">MC42NjY2NjY2NjY3AA</bytes>
-								</object>
-							</object>
-							<object class="NSColor" key="NSTextColor">
-								<int key="NSColorSpace">6</int>
-								<string key="NSCatalogName">System</string>
-								<string key="NSColorName">controlTextColor</string>
-								<object class="NSColor" key="NSColor">
-									<int key="NSColorSpace">3</int>
-									<bytes key="NSWhite">MAA</bytes>
-								</object>
-							</object>
+							<reference key="NSBackgroundColor" ref="233890848"/>
+							<reference key="NSTextColor" ref="407189409"/>
 						</object>
 					</object>
 					<object class="BWTransparentButton" id="395817245">
@@ -3508,6 +3524,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="281604773"/>
 							<reference ref="395817245"/>
+							<reference ref="159050571"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -3538,6 +3555,20 @@
 						<int key="objectID">590</int>
 						<reference key="object" ref="388481026"/>
 						<reference key="parent" ref="281604773"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">594</int>
+						<reference key="object" ref="159050571"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="762962952"/>
+						</object>
+						<reference key="parent" ref="251720822"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">595</int>
+						<reference key="object" ref="762962952"/>
+						<reference key="parent" ref="159050571"/>
 					</object>
 				</object>
 			</object>
@@ -3788,6 +3819,8 @@
 					<string>588.IBPluginDependency</string>
 					<string>589.IBPluginDependency</string>
 					<string>590.IBPluginDependency</string>
+					<string>594.IBPluginDependency</string>
+					<string>595.IBPluginDependency</string>
 					<string>72.IBPluginDependency</string>
 					<string>72.ImportedFromIB2</string>
 					<string>73.IBPluginDependency</string>
@@ -3921,7 +3954,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
 					<string>{{525, 802}, {197, 73}}</string>
-					<string>{{380, 836}, {405, 20}}</string>
+					<string>{{380, 736}, {405, 20}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
 					<string>{74, 862}</string>
@@ -4026,9 +4059,9 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{149, 911}, {257, 61}}</string>
+					<string>{{149, 698}, {257, 61}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{149, 911}, {257, 61}}</string>
+					<string>{{149, 698}, {257, 61}}</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>ZBButton</string>
@@ -4054,8 +4087,10 @@
 					<integer value="1"/>
 					<string>com.brandonwalkin.BWToolkit</string>
 					<string>com.brandonwalkin.BWToolkit</string>
-					<string>{{143, 825}, {264, 62}}</string>
+					<string>{{695, 433}, {264, 62}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.brandonwalkin.BWToolkit</string>
+					<string>com.brandonwalkin.BWToolkit</string>
 					<string>com.brandonwalkin.BWToolkit</string>
 					<string>com.brandonwalkin.BWToolkit</string>
 					<string>com.brandonwalkin.BWToolkit</string>
@@ -4104,7 +4139,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">593</int>
+			<int key="maxID">595</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -4688,13 +4723,6 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBFrameworkSource</string>
 						<string key="minorKey">Foundation.framework/Headers/NSURLDownload.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">NSObject</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBFrameworkSource</string>
-						<string key="minorKey">QTKit.framework/Headers/QTCaptureDecompressedAudioOutput.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
